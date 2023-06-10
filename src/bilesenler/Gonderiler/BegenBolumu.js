@@ -16,8 +16,7 @@ const BegenBolumu = props => {
         className='like-section'
         key='likes-icons-container'
       >
-        <div className='like-section-wrapper'onClick={(event)=>{gonderiyiBegen(/*???*/)
-        }}> 
+        <div className='like-section-wrapper'onClick={gonderiyiBegen}> 
           <FontAwesomeIcon icon={faHeart} />
         </div>
         <div className='like-section-wrapper'>

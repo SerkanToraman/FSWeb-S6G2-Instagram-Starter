@@ -38,6 +38,11 @@ const App = () => {
       // gonderiler.map((dev) => {
       
       // })
+      let begeniSayisi =gonderiler.map((item)=> 
+      item.id === gonderiID ? item.likes++ : item.likes
+      )
+      
+      setGonderiler([...gonderiler],{id:begeniSayisi});
 
   };
 
@@ -47,7 +52,7 @@ const App = () => {
     <div className='App'>
       {/* AramaÇubuğu ve Gönderiler'i render etmesi için buraya ekleyin */}
       <AramaCubugu />
-      <Gonderiler gonderiler={gonderiler} />
+      <Gonderiler gonderiler={gonderiler} gonderiyiBegen={gonderiyiBegen}/>
       
       {/* Her bileşenin hangi proplara ihtiyaç duyduğunu kontrol edin, eğer ihtiyaç varsa ekleyin! */}
     </div>
