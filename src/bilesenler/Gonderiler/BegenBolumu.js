@@ -23,7 +23,7 @@ const BegenBolumu = props => {
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className='like-number'>{begeniSayisi}</p>
+      <p className='like-number'>{begeniSayisi} likes</p>
     </div>
   );
 };

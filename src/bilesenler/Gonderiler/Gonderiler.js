@@ -1,8 +1,9 @@
 import React from 'react';
 import Gonderi from './Gonderi';
+import Yorumlar from '../Yorumlar/Yorumlar';
 import './Gonderiler.css';
 
-const Gonderiler = (props) => {
+const Gonderiler = ({props}) => {
   // 🔥 Gönderiler'in ebeveyninin doğru değişkenleri doğru şekilde ilettiğine emin olun!
   const { gonderiyiBegen, gonderiler } = props;
 
@@ -15,6 +16,7 @@ const Gonderiler = (props) => {
       {gonderiler.map((item)=> 
         <div key={item.id}>
           <Gonderi gonderi ={item} gonderiyiBegen={gonderiyiBegen}/> 
+         
         </div>
       )}
       

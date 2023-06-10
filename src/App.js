@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 import AramaCubugu from './bilesenler/AramaCubugu/AramaCubugu'
 import Gonderiler from './bilesenler/Gonderiler/Gonderiler';
 
+
 // Gönderiler (çoğul!) ve AramaÇubuğu bileşenlerini import edin, çünkü bunlar App bileşeni içinde kullanılacak
 // sahteVeri'yi import edin
 import sahteVeri from './sahte-veri';
@@ -46,13 +47,18 @@ const App = () => {
 
   };
 
-    
+    let props = {
+      gonderiler,
+      gonderiyiBegen
+    }
+
+    console.log("comments",gonderiler.comments)
 
   return (
     <div className='App'>
       {/* AramaÇubuğu ve Gönderiler'i render etmesi için buraya ekleyin */}
       <AramaCubugu />
-      <Gonderiler gonderiler={gonderiler} gonderiyiBegen={gonderiyiBegen}/>
+      <Gonderiler props= {props} />
       
       {/* Her bileşenin hangi proplara ihtiyaç duyduğunu kontrol edin, eğer ihtiyaç varsa ekleyin! */}
     </div>
